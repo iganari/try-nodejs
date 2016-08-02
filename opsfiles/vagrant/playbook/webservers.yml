@@ -3,6 +3,7 @@
   roles:
     - common
     - vagrant
+    - nodejs
 #     - java
 #     - jenkins
 #     - nginx

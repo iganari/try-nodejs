@@ -1,0 +1,17 @@
+---
+
+- name: add node.js ppa
+  shell: curl -sL https://deb.nodesource.com/setup | bash -
+
+- name: install nodejs
+  apt: pkg="{{ item }}" update_cache=yes state=latest 
+  with_items:
+  - nodejs
+  - build-essential 
+  - npm
+
+# - name: npm package install
+#   npm: name=gulp path=/home/vagrant
+
+- name: npm package install
+  npm: name=gulp global=yes
