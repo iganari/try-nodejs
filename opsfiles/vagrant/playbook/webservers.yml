@@ -1,0 +1,9 @@
+---
+- hosts: vagrant
+  roles:
+    - common
+    - vagrant
+#     - java
+#     - jenkins
+#     - nginx
+#     - iptables
