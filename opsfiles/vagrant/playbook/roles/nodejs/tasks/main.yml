@@ -7,6 +7,7 @@
   apt: pkg="{{ item }}" update_cache=yes state=latest 
   with_items:
   - nodejs
+  - nodejs-legacy
   - build-essential 
   - npm
 
