@@ -10,8 +10,17 @@
   - build-essential 
   - npm
 
-# - name: npm package install
-#   npm: name=gulp path=/home/vagrant
+- name: npm package install
+  npm: name=n global=yes state=latest
 
-# - name: npm package install
-#   npm: name=gulp global=yes
+- name: n command
+  command: n stable
+
+- name: create symlink
+  file: >
+    state=link
+    force=yes
+    src='/usr/local/bin/node'
+    path='/usr/bin/node'
+    
+    
